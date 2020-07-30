@@ -11,7 +11,8 @@ pipeline {
 		steps{
 			script {
 				dockerImage = docker.build glhftech/myapp
-		}
-	 
-	 
-  }
+			}
+  	}
+	}
+}
+}

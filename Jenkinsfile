@@ -6,8 +6,12 @@ pipeline {
 			  sh 'echo "Hello World 111"'
 		  }
 	 }  
+	 
 	 stage('Docker build') {
-			  docker.build("glhftech/myapp")
-		  }
-	 }
+		steps{
+			script {
+				dockerImage = docker.build glhftech/myapp
+		}
+	 
+	 
   }

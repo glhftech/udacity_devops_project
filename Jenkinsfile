@@ -3,7 +3,7 @@ pipeline {
   stages {
 	 stage('Lint') {
 		  steps {
-			  sh 'echo "Hello World 111"'
+			  sh 'hadolint Dockerfile'
 		  }
 	 }  
 	 

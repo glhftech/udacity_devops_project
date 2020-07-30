@@ -7,9 +7,7 @@ pipeline {
 		  }
 	 }  
 	 stage('Docker build') {
-		  steps {
 			  docker.build("glhftech/myapp")
-			  }
 		  }
 	 }
   }

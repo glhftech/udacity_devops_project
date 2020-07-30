@@ -14,5 +14,16 @@ pipeline {
 			}
   	}
 	}
+	
+	stage('Push image') {
+		steps{
+			script {
+				docker.withRegistry( '', 'dockerhub_id' ) {
+					dockerImage.push()
+					}
+				}
+			}
+		}
+	
 }
 }

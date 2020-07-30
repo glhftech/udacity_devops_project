@@ -3,14 +3,13 @@ pipeline {
   stages {
 	 stage('Lint') {
 		  steps {
-			  sh 'echo "Hello World 11"'
+			  sh 'echo "Hello World 111"'
 		  }
 	 }  
 	 stage('AWS') {
 		  steps {
-			  sh 'echo "Hello World 22"'
+			  sh 'echo "Hello World 222"'
 			  }
 		  }
 	 }
   }
-}

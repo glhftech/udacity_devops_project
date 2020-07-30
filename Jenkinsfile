@@ -6,9 +6,9 @@ pipeline {
 			  sh 'echo "Hello World 111"'
 		  }
 	 }  
-	 stage('AWS') {
+	 stage('Docker build') {
 		  steps {
-			  sh 'echo "Hello World 222"'
+			  docker.build("glhftech/myapp")
 			  }
 		  }
 	 }

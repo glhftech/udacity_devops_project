@@ -3,12 +3,12 @@ pipeline {
   stages {
 	 stage('Lint') {
 		  steps {
-			  sh 'echo "Hello World 1"'
+			  sh 'echo "Hello World 11"'
 		  }
 	 }  
 	 stage('AWS') {
 		  steps {
-			  sh 'echo "Hello World 2"'
+			  sh 'echo "Hello World 22"'
 			  }
 		  }
 	 }

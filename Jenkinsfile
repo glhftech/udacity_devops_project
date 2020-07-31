@@ -23,7 +23,8 @@ pipeline {
 		steps{
 			script {
 				docker.withRegistry( '', 'dockerhub_id' ) {
-					dockerImage.push()
+					dockerImage.push("${env.BUILD_NUMBER}")
+            		dockerImage.push("latest")
 					}
 				}
 			}
@@ -31,7 +32,7 @@ pipeline {
 	
 	stage('Cleaning up') {
 		steps{
-			sh "docker rmi glhftech/myapp:${VERSION}"
+			sh "docker rmi glhftech/myapp:latest"
 		}
 	}
 

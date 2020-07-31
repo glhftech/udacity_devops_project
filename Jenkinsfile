@@ -36,7 +36,7 @@ pipeline {
 
         stage('Rolling update deploy to k8s') {
             steps {
-                sh "cat /home/ubuntu/deployment.yaml | sed "s/{{VERSION_NUM}}/${env.BUILD_NUMBER}/g" | kubectl apply -f -"
+                sh "cat /home/ubuntu/deployment.yaml | sed 's/{{VERSION_NUM}}/${env.BUILD_NUMBER}/g' | kubectl apply -f -"
             }
         }
 

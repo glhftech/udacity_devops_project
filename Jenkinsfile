@@ -1,4 +1,8 @@
 pipeline {
+	environment { 
+	   VERSION = "${env.BUILD_ID}-${env.GIT_COMMIT}"
+	}
+
   agent any 
   stages {
 	 stage('Lint') {
@@ -27,7 +31,7 @@ pipeline {
 	
 	stage('Cleaning up') {
 		steps{
-			sh "docker rmi glhftech/myapp:latest"
+			sh "docker rmi glhftech/myapp:${VERSION}"
 		}
 	}
 
